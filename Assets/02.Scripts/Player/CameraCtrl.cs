@@ -19,6 +19,7 @@ public class CameraCtrl : MonoBehaviour
 
     void Start()
     {
+        Cursor.visible = false;
         cam = Camera.main;
         tr = transform;
     }
