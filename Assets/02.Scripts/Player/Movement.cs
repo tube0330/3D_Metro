@@ -44,9 +44,7 @@ public class Movement : MonoBehaviour
     public void Jump()
     {
         if (cc.isGrounded)
-        {
             // 지면에 있을 때 점프
             moveDir.y = jumpForce;
-        }
     }
 }
