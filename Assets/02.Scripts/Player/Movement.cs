@@ -7,16 +7,18 @@ public class Movement : MonoBehaviour
     float moveSpeed = 2.0f;  // 속도
     float jumpForce = 3.0f; // 점프 파워
     float gravity = -10f;   // 중력 값, 높인 중력으로 설정
-    private Vector3 moveDir;
+    Vector3 moveDir;
+    Transform tr;
 
-    private CharacterController cc;
+    CharacterController cc;
 
     void Start()
     {
         cc = GetComponent<CharacterController>();
+        tr = transform;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         // 지면에 닿아 있는지 확인
         bool isGrounded = cc.isGrounded;
